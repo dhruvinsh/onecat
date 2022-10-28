@@ -63,9 +63,11 @@ local color_palette = {
 	mauve = "#c678dd",
 	flamingo = "#be5046",
 
+	-- now patching extra palettes
+	maroon = "#e06c75",
+
 	-- extra colors not decided what to do
 	pink = "#F5C2E7",
-	maroon = "#EBA0AC",
 	sky = "#89DCEB",
 	sapphire = "#74C7EC",
 
