@@ -65,10 +65,10 @@ local color_palette = {
 
 	-- now patching extra palettes
 	maroon = "#e06c75",
+	sky = "#d19a66",
 
 	-- extra colors not decided what to do
 	pink = "#F5C2E7",
-	sky = "#89DCEB",
 	sapphire = "#74C7EC",
 
 	subtext1 = "#BAC2DE",
