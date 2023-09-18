@@ -2,9 +2,9 @@ local M = {}
 
 function M.get()
 	return {
-		LspTroubleText = { fg = cp.green },
-		LspTroubleCount = { fg = cp.pink, bg = cp.surface1 },
-		LspTroubleNormal = { fg = cp.text, bg = cp.crust },
+		TroubleText = { fg = C.green },
+		TroubleCount = { fg = C.pink, bg = O.transparent_background and C.none or C.surface1 },
+		TroubleNormal = { fg = C.text, bg = O.transparent_background and C.none or C.crust },
 	}
 end
 

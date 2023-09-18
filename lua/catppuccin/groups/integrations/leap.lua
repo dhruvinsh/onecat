@@ -3,19 +3,21 @@ local M = {}
 function M.get()
 	return {
 		LeapMatch = {
-			fg = ucolors.vary_color({ latte = "#222222" }, ucolors.brighten(cp.green, 0.3)),
-			style = { "underline", "nocombine" },
+			fg = O.transparent_background and C.pink or U.vary_color({ latte = "#222222" }, U.brighten(C.green, 0.3)),
+			style = { "underline", "nocombine", O.transparent_background and "bold" or nil },
 		},
 		LeapLabelPrimary = {
-			fg = ucolors.vary_color({ latte = "#222222" }, cp.base),
-			bg = ucolors.vary_color({ latte = ucolors.brighten(cp.red, 0.4) }, ucolors.brighten(cp.green, 0.3)),
-			style = { "nocombine" },
+			fg = O.transparent_background and C.green or U.vary_color({ latte = "#222222" }, C.base),
+			bg = O.transparent_background and C.none
+				or U.vary_color({ latte = U.brighten(C.red, 0.4) }, U.brighten(C.green, 0.3)),
+			style = { "nocombine", O.transparent_background and "bold" or nil },
 		},
 		LeapLabelSecondary = {
-			fg = ucolors.vary_color({ latte = "#222222" }, cp.base),
-			bg = ucolors.vary_color({ latte = ucolors.brighten(cp.sky, 0.3) }, cp.sky),
-			style = { "nocombine" },
+			fg = O.transparent_background and C.blue or U.vary_color({ latte = "#222222" }, C.base),
+			bg = O.transparent_background and C.none or U.vary_color({ latte = U.brighten(C.sky, 0.3) }, C.sky),
+			style = { "nocombine", O.transparent_background and "bold" or nil },
 		},
+		LeapBackdrop = { fg = O.transparent_background and C.overlay0 or C.none },
 	}
 end
 

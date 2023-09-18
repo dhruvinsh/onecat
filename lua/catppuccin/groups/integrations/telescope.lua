@@ -1,25 +1,59 @@
 local M = {}
 
 function M.get()
+	if O.integrations.telescope.style == "nvchad" then
+		return {
+			TelescopeBorder = {
+				fg = O.transparent_background and C.blue or C.mantle,
+				bg = O.transparent_background and C.none or C.mantle,
+			},
+			TelescopeMatching = { fg = C.blue },
+			TelescopeNormal = {
+				bg = O.transparent_background and C.none or C.mantle,
+			},
+			TelescopePromptBorder = {
+				fg = O.transparent_background and C.blue or C.surface0,
+				bg = O.transparent_background and C.none or C.surface0,
+			},
+			TelescopePromptNormal = {
+				fg = C.text,
+				bg = O.transparent_background and C.none or C.surface0,
+			},
+			TelescopePromptPrefix = {
+				fg = C.flamingo,
+				bg = O.transparent_background and C.none or C.surface0,
+			},
+			TelescopePreviewTitle = {
+				fg = O.transparent_background and C.green or C.base,
+				bg = O.transparent_background and C.none or C.green,
+			},
+			TelescopePromptTitle = {
+				fg = O.transparent_background and C.red or C.base,
+				bg = O.transparent_background and C.none or C.red,
+			},
+			TelescopeResultsTitle = {
+				fg = O.transparent_background and C.lavender or C.mantle,
+				bg = O.transparent_background and C.none or C.lavender,
+			},
+			TelescopeSelection = {
+				fg = O.transparent_background and C.flamingo or C.text,
+				bg = O.transparent_background and C.none or C.surface0,
+				style = { "bold" },
+			},
+			TelescopeSelectionCaret = { fg = C.flamingo },
+		}
+	end
+
 	return {
-		TelescopeBorder = { fg = cp.blue },
-		TelescopeSelectionCaret = { fg = cp.flamingo },
+		-- TelescopeNormal = { link = "NormalFloat" }, -- Respect telescope's default float bg
+		TelescopeBorder = { link = "FloatBorder" },
+		TelescopeSelectionCaret = { fg = C.flamingo },
 		TelescopeSelection = {
-			fg = cnf.transparent_background and cp.flamingo or cp.text,
-			bg = cnf.transparent_background and cp.none or cp.surface0,
+			fg = O.transparent_background and C.flamingo or C.text,
+			bg = O.transparent_background and C.none or C.surface0,
 			style = { "bold" },
 		},
-		TelescopeMatching = { fg = cp.blue },
-		-- TelescopePromptPrefix = { bg = cp.crust },
-		-- TelescopePromptNormal = { bg = cp.crust },
-		-- TelescopeResultsNormal = { bg = cp.mantle },
-		-- TelescopePreviewNormal = { bg = cp.crust },
-		-- TelescopePromptBorder = { bg = cp.crust, fg = cp.crust },
-		-- TelescopeResultsBorder = { bg = cp.mantle, fg = cp.crust },
-		-- TelescopePreviewBorder = { bg = cp.crust, fg = cp.crust },
-		-- TelescopePromptTitle = { fg = cp.crust },
-		-- TelescopeResultsTitle = { fg = cp.text },
-		-- TelescopePreviewTitle = { fg = cp.crust },
+		TelescopeMatching = { fg = C.blue },
 	}
 end
 

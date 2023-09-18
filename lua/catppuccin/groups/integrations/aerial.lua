@@ -2,8 +2,8 @@ local M = {}
 
 function M.get()
 	return {
-		AerialLine = { fg = cp.yellow, bg = cp.none },
-		AerialGuide = { fg = cp.overlay2 },
+		AerialLine = { fg = C.yellow, bg = C.none },
+		AerialGuide = { fg = C.overlay2 },
 		AerialBooleanIcon = { link = "@boolean" },
 		AerialClassIcon = { link = "@type" },
 		AerialConstantIcon = { link = "@constant" },
@@ -14,7 +14,7 @@ function M.get()
 		AerialNamespaceIcon = { link = "@namespace" },
 		AerialNumberIcon = { link = "@number" },
 		AerialOperatorIcon = { link = "@operator" },
-		AerialTypeParameterIcon = { link = "@parameter" },
+		AerialTypeParameterIcon = { link = "@type" },
 		AerialPropertyIcon = { link = "@property" },
 		AerialStringIcon = { link = "@string" },
 		AerialVariableIcon = { link = "@constant" },
